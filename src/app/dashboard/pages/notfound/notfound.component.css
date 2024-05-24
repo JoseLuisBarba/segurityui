@@ -1,0 +1,41 @@
+:host {
+  display: block;
+}
+
+.bg-cover {
+  background-size: cover;
+  background-repeat: repeat;
+}
+.sidebar-desktop {
+  display: block;
+}
+
+.sidebar-mobile {
+  display: none;
+}
+.absolute.flex-col.justify-center.items-center.z-2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 50%); /* Center based on its own dimensions */
+  /* Other styles... */
+}
+/* Oculta la barra lateral en pantallas móviles (menos de 768px de ancho) */
+@media (max-width: 768px) {
+  .sidebar-desktop {
+    display: none; /* Oculta la barra lateral en dispositivos móviles */
+  }
+  .sidebar-mobile {
+    display: block;
+  }
+}
+
+/* Opcional: Mostrar la barra lateral nuevamente en pantallas más grandes */
+@media (min-width: 768px) {
+  .sidebar-desktop {
+    display: block; /* Muestra la barra lateral en pantallas más grandes (escritorio) */
+  }
+  .sidebar-mobile {
+    display: none;
+  }
+}

@@ -1,0 +1,18 @@
+<!-- This is an example component -->
+
+
+
+
+<div  class="border-dashed border-cyan-300">
+    <!-- Photo File Input -->
+    <div class="text-center ">
+        <!-- Current Profile Photo -->
+        <div class="mt-2" x-show="! photoPreview">
+            <img [src]="imageURL" class="w-50 h-40 m-auto rounded-md shadow">
+        </div>
+        <!-- New Profile Photo Preview -->
+
+        <input type="file" class="file-input file-input-bordered w-full max-w-xl mt-2" />
+
+    </div>
+</div>

@@ -1,0 +1,197 @@
+
+  
+<div class="modal-box">
+
+
+    <div class="max-w-xs lg:breadcrumbs m-2 text-xl  ">
+        <ul>
+          <li>
+            <a>
+                <span class="ml-2">Producción / Agregar</span>
+            </a>
+          </li> 
+        </ul>
+    </div>
+
+
+    
+    <form method="dialog" class="flex flex-col items-start w-min-xl" [formGroup]="addForm" >
+
+        <label  for="name" class="font-light flex flex-row gap-2 text-lg mt-2 w-max-xl"><svg width="32" height="32" viewBox="0 0 32 32" fill="#ffa000" xmlns="http://www.w3.org/2000/svg">
+            <path d="M30 10C30 8.67392 29.4732 7.40215 28.5356 6.46447C27.5979 5.52678 26.3261 5 25 5H6.00003C4.85187 5.0007 3.73893 5.39652 2.84819 6.12098C1.95744 6.84544 1.34317 7.85438 1.10856 8.97832C0.873945 10.1022 1.0333 11.2727 1.55984 12.293C2.08638 13.3133 2.94803 14.1213 4.00003 14.5813V25C4.00003 25.5304 4.21074 26.0391 4.58581 26.4142C4.96089 26.7893 5.46959 27 6.00003 27H25C25.5305 27 26.0392 26.7893 26.4142 26.4142C26.7893 26.0391 27 25.5304 27 25V14.5813C27.8909 14.1914 28.649 13.5506 29.1817 12.737C29.7145 11.9235 29.9988 10.9724 30 10ZM6.00003 15C6.26524 15 6.5196 14.8946 6.70713 14.7071C6.89467 14.5196 7.00003 14.2652 7.00003 14C7.00003 13.7348 6.89467 13.4804 6.70713 13.2929C6.5196 13.1054 6.26524 13 6.00003 13C5.20438 13 4.44131 12.6839 3.87871 12.1213C3.3161 11.5587 3.00003 10.7956 3.00003 10C3.00003 9.20435 3.3161 8.44129 3.87871 7.87868C4.44131 7.31607 5.20438 7 6.00003 7H18C18.7957 7 19.5587 7.31607 20.1213 7.87868C20.684 8.44129 21 9.20435 21 10C21 10.7956 20.684 11.5587 20.1213 12.1213C19.5587 12.6839 18.7957 13 18 13C17.7348 13 17.4805 13.1054 17.2929 13.2929C17.1054 13.4804 17 13.7348 17 14C17 14.2652 17.1054 14.5196 17.2929 14.7071C17.4805 14.8946 17.7348 15 18 15V25H6.00003V15ZM25 13C24.7348 13 24.4805 13.1054 24.2929 13.2929C24.1054 13.4804 24 13.7348 24 14C24 14.2652 24.1054 14.5196 24.2929 14.7071C24.4805 14.8946 24.7348 15 25 15V25H20V14.5813C20.6912 14.2795 21.3051 13.8252 21.7959 13.2526C22.2866 12.6799 22.6415 12.0036 22.8339 11.2744C23.0263 10.5452 23.0512 9.78188 22.9068 9.04165C22.7624 8.30143 22.4524 7.60346 22 7H25C25.7957 7 26.5587 7.31607 27.1213 7.87868C27.684 8.44129 28 9.20435 28 10C28 10.7956 27.684 11.5587 27.1213 12.1213C26.5587 12.6839 25.7957 13 25 13Z"  stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"/>
+            </svg> Tipo de producto<span class="text-pink-600">*</span></label>
+        <label
+             
+            class="form-control w-full max-w-lg mt-2">
+            <select class="select select-bordered text-lg mt-2" formControlName="name" (change)="showComputedChangeProduct()">
+            <option disabled selected class="text-lg">Elige uno</option>
+            @for (product of itemsService.products(); track $index) {
+                <option class="text-lg">{{product.name}}</option>
+            } @empty {
+                <option class="text-lg">No hay datos que mostrar</option>
+            }
+            </select>
+        </label>
+        @if(addControls['name'].touched && addControls['name'].invalid) {
+            @if(addControls['name'].errors && addControls['name'].errors['required']){
+                <p class="mt-2  text-pink-600 text-lg">
+                    El tipo de producto es requerido.
+                </p>
+            }
+            @if(addControls['name'].errors && addControls['name'].errors['pattern']){
+                <p class="mt-2  text-pink-600 text-lg">
+                    Por favor ingrese solo vocales y consonantes.
+                </p>
+            }
+        }
+    
+
+
+        <label for="creationDate"  class="font-light flex flex-row gap-2 text-lg mt-2"><svg xmlns="http://www.w3.org/2000/svg" fill="none"  viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-7 h-7">
+            <path stroke-linecap="round"   stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5" />
+          </svg>
+            Fecha creación<span class="text-pink-600">*</span>
+        </label>
+
+        <input 
+            formControlName="creationDate"
+            name="creationDate" 
+            type="date"
+            (change)="showComputedChangeStock()" 
+            class="peer max-w-xs text-lg  block  px-3 py-2  border border-300 rounded-md  shadow-sm placeholder-400  text-900  ring-inset ring-300 placeholder:text-400  focus:ring-inset  sm:text-sm sm:leading-6 focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500
+            disabled:bg-50 disabled:text-500 disabled:border-slate-200 disabled:shadow-none
+            "
+        />
+
+        @if(addControls['creationDate'].touched && addControls['creationDate'].invalid) {
+            @if(addControls['creationDate'].errors && addControls['creationDate'].errors['required']){
+                <p class="mt-2  text-pink-600 text-lg">
+                    La fecha de creación es requerida.
+                </p>
+            }
+        }
+
+        <label for="price"  class="font-light flex flex-row gap-2 text-lg mt-2"><svg xmlns="http://www.w3.org/2000/svg"  fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-7 h-7">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5m-9-6h.008v.008H12v-.008ZM12 15h.008v.008H12V15Zm0 2.25h.008v.008H12v-.008ZM9.75 15h.008v.008H9.75V15Zm0 2.25h.008v.008H9.75v-.008ZM7.5 15h.008v.008H7.5V15Zm0 2.25h.008v.008H7.5v-.008Zm6.75-4.5h.008v.008h-.008v-.008Zm0 2.25h.008v.008h-.008V15Zm0 2.25h.008v.008h-.008v-.008Zm2.25-4.5h.008v.008H16.5v-.008Zm0 2.25h.008v.008H16.5V15Z" />
+          </svg>
+          
+            Fecha vencimiento<span class="text-pink-600">*</span>
+        </label>
+
+        <input 
+            formControlName="dueDate"
+            name="dueDate" 
+            type="date" 
+            class="peer max-w-xs text-lg  block  px-3 py-2  border border-300 rounded-md  shadow-sm placeholder-400  text-900  ring-inset ring-300 placeholder:text-400  focus:ring-inset  sm:text-sm sm:leading-6 focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500
+            disabled:bg-50 disabled:text-500 disabled:border-slate-200 disabled:shadow-none
+            "
+        />
+
+        @if(addControls['dueDate'].touched && addControls['dueDate'].invalid) {
+            @if(addControls['dueDate'].errors && addControls['dueDate'].errors['required']){
+                <p class="mt-2  text-pink-600 text-lg">
+                    La fecha de vencimiento es requerida.
+                </p>
+            }
+        }
+
+        <label  for="currentStock" class="font-light flex flex-row gap-2 text-lg mt-2"> 🏭 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="#CCAB4B" width="25" height="25">
+                <path d="M509.5 184.6L458.9 32.8C452.4 13.2 434.1 0 413.4 0H272v192h238.7c-.4-2.5-.4-5-1.2-7.4zM240 0H98.6c-20.7 0-39 13.2-45.5 32.8L2.5 184.6c-.8 2.4-.8 4.9-1.2 7.4H240V0zM0 224v240c0 26.5 21.5 48 48 48h416c26.5 0 48-21.5 48-48V224H0z"/>
+            </svg>
+             Stock a la fecha
+        </label>
+        <input 
+            id="currentStock"
+            [placeholder]=placeholderCurrentStock
+            type="number" 
+            step="0.01"            
+            class="input input-bordered w-full max-w-lg text mt-2" 
+            disabled 
+        />
+
+
+        <label for="quantity"  class="font-light flex flex-row gap-2 text-lg mt-2">+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="#CCAB4B" width="25" height="25">
+                <path d="M509.5 184.6L458.9 32.8C452.4 13.2 434.1 0 413.4 0H272v192h238.7c-.4-2.5-.4-5-1.2-7.4zM240 0H98.6c-20.7 0-39 13.2-45.5 32.8L2.5 184.6c-.8 2.4-.8 4.9-1.2 7.4H240V0zM0 224v240c0 26.5 21.5 48 48 48h416c26.5 0 48-21.5 48-48V224H0z"/>
+            </svg>
+            Cantidad Producida<span class="text-pink-600">*</span>
+        </label>
+        <input 
+            formControlName="quantity"
+            (input)="positiveStock($event)"
+            type="number" 
+            step="0.01" 
+            class="input input-bordered w-full max-w-lg grow text-lg  mt-2" 
+        />
+        @if(addControls['quantity'].touched && addControls['quantity'].invalid) {
+            @if(addControls['quantity'].errors && addControls['quantity'].errors['required']){
+                <p class="mt-2  text-pink-600 text-lg">
+                    El stock es requerido.
+                </p>
+            }
+            @if(addControls['quantity'].errors && addControls['quantity'].errors['min']){
+                <p class="mt-2  text-pink-600 text-lg">
+                    El stock debe ser mayor a 0.
+                </p>
+            }
+        }
+
+        <label  for="predictedStock" class="font-light flex flex-row gap-2 text-lg mt-2"> = <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="#CCAB4B" width="25" height="25">
+                <path d="M509.5 184.6L458.9 32.8C452.4 13.2 434.1 0 413.4 0H272v192h238.7c-.4-2.5-.4-5-1.2-7.4zM240 0H98.6c-20.7 0-39 13.2-45.5 32.8L2.5 184.6c-.8 2.4-.8 4.9-1.2 7.4H240V0zM0 224v240c0 26.5 21.5 48 48 48h416c26.5 0 48-21.5 48-48V224H0z"/>
+            </svg>
+            Quedarían en stock
+        </label>
+        <input 
+            id="predictedStock"
+            type="number" 
+            step="0.01"
+            [placeholder]=placeholderPredictedStock
+            class="input input-bordered w-full max-w-lg text mt-2" 
+            disabled 
+        />
+
+        <label  for="utility" class="font-light flex flex-row gap-2 text-lg mt-2"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="25" height="25" fill="#fbc02d">
+            <path d="M0 405.3V448c0 35.3 86 64 192 64s192-28.7 192-64v-42.7C342.7 434.4 267.2 448 192 448S41.3 434.4 0 405.3zM320 128c106 0 192-28.7 192-64S426 0 320 0 128 28.7 128 64s86 64 192 64zM0 300.4V352c0 35.3 86 64 192 64s192-28.7 192-64v-51.6c-41.3 34-116.9 51.6-192 51.6S41.3 334.4 0 300.4zm416 11c57.3-11.1 96-31.7 96-55.4v-42.7c-23.2 16.4-57.3 27.6-96 34.5v63.6zM192 160C86 160 0 195.8 0 240s86 80 192 80 192-35.8 192-80-86-80-192-80zm219.3 56.3c60-10.8 100.7-32 100.7-56.3v-42.7c-35.5 25.1-96.5 38.6-160.7 41.8 29.5 14.3 51.2 33.5 60 57.2z"/>
+            </svg>
+            Utilidad a la fecha
+        </label>
+        <input 
+            id="utility"
+            type="number" 
+            [placeholder]=placeholderCurrentUtility
+            class="input input-bordered w-full max-w-lg text mt-2" 
+            disabled 
+        />
+
+        <label  for="utility" class="font-light flex flex-row gap-2 text-lg mt-2"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" width="25" height="25" fill="#fbc02d">
+                <path d="M433.5 165.9l101.2-111.9C554.6 34.1 540.5 0 512.3 0H31.7C3.5 0-10.6 34.1 9.3 54.1L192 256v155.9c0 12.6 5.9 24.4 16 32l80 60c20.9 15.6 48.5 7 59.2-13.6C310.8 455.4 288 406.4 288 352c0-89.8 62.1-165.2 145.5-186.1zM480 192c-88.4 0-160 71.6-160 160s71.6 160 160 160 160-71.6 160-160-71.6-160-160-160zm16 239.9V448c0 4.4-3.6 8-8 8h-16c-4.4 0-8-3.6-8-8v-16.3c-11.3-.6-22.3-4.5-31.4-11.4-3.9-2.9-4.1-8.8-.6-12.1l11.8-11.2c2.8-2.6 6.9-2.8 10.1-.7 3.9 2.4 8.3 3.7 12.8 3.7h28.1c6.5 0 11.8-5.9 11.8-13.2 0-6-3.6-11.2-8.8-12.7l-45-13.5c-18.6-5.6-31.6-23.4-31.6-43.4 0-24.5 19.1-44.4 42.7-45.1V256c0-4.4 3.6-8 8-8h16c4.4 0 8 3.6 8 8v16.3c11.3 .6 22.3 4.5 31.4 11.4 3.9 2.9 4.1 8.8 .6 12.1l-11.8 11.2c-2.8 2.6-6.9 2.8-10.1 .7-3.9-2.4-8.3-3.7-12.8-3.7h-28.1c-6.5 0-11.8 5.9-11.8 13.2 0 6 3.6 11.2 8.8 12.7l45 13.5c18.6 5.6 31.6 23.4 31.6 43.4 0 24.5-19 44.4-42.7 45.1z"/>
+            </svg>
+            Valor neto objetivo
+        </label>
+        <input 
+            id="utility"
+            type="number" 
+            [placeholder]="placeholderPredictedRevenue"
+            class="input input-bordered w-full max-w-lg text mt-2" 
+            disabled 
+        />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <div class="modal-action mx-10">
+            <button class="btn btn-info m-2 btn-md md:btn-md lg:btn-lg xl:btn-xl text-lg" (click)="onSubmit()"> Registrar </button>
+            <button class="btn btn-outline btn-error border-dashed m-2 btn-md md:btn-md lg:btn-lg xl:btn-xl text-lg" (click)="onReset()">Cancelar</button>
+        </div>
+    </form>
+</div>
+

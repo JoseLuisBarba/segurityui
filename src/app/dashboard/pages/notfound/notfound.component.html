@@ -1,0 +1,35 @@
+
+
+@if(wContent().content) {
+    <div class="sidebar-desktop bg-base-200 h-screen flex flex-col"> <!-- Contenedor principal con altura completa y diseño de columna -->
+        <div class="flex-grow flex flex-row bg-base-200"> <!-- División flexible que ocupa todo el espacio vertical disponible -->
+            <div class="flex-grow bg-base-200"> <!-- Contenido flexible que ocupa el espacio restante -->
+                <div class="absolute flex flex-col justify-center items-center z-2" >
+                    <h1 class="font-bold xl:text-6xl sm:text-xl text-center mb-2">Resultado no encontrado</h1>
+                    <p class="font-normal xl:text-2xl sm:text-lg text-center mb-1 ">¡Ups! Esa página parece haber tomado un camino incorrecto.</p>
+                    <p class="font-normal xl:text-2xl sm:text-lg text-center mb-2  ">Déjanos guiarte de regreso a tu destino.</p>
+                    <a [routerLink]="['']" class="btn btn-active bg-stone-950 text-white text-2xl"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 15 3 9m0 0 6-6M3 9h12a6 6 0 0 1 0 12h-3" />
+                      </svg>
+                      Regresar a la página principal
+                    </a>
+                </div>
+                <img [src]="bgImg" width="{{wContent().with}}" height="{{wContent().hight}}" class="w-svw h-svh mx-auto my-auto z-0"> <!-- Router outlet con estilos Tailwind -->
+            </div>
+        </div>
+    </div>
+
+} @else {
+    <div class="sidebar-mobile bg-base-200" >
+        <div class="absolute flex flex-col justify-center items-center z-2 text-center w-svw px-5"  style="transform: translate(-50%, 10%);">
+            <h1 class="font-bold text-3xl mb-2">Resultado no encontrado</h1>
+            <p class="font-semibold text-lg w-full mb-2">¡Ups! Esa página parece haber tomado un camino incorrecto. Déjanos guiarte de regreso a tu destino.</p>
+            <a [routerLink]="['']" class="btn btn-active bg-stone-950 text-white text-lg "><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 15 3 9m0 0 6-6M3 9h12a6 6 0 0 1 0 12h-3" />
+              </svg>
+              Regresar a la página principal
+            </a>
+        </div>
+        <img [src]="bgmbImg" width="{{wContent().with}}" height="{{wContent().hight}}" class="w-svw h-svh mx-auto my-auto">
+    </div>   
+}

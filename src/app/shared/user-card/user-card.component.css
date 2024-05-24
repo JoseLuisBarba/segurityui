@@ -1,0 +1,28 @@
+:host {
+  display: block;
+}
+.show-btn {
+  min-width: 150px;
+  background-color: #F36699;
+  color: #fff;
+  border: 1px solid #F36699;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+  margin: 10px;
+  padding: 10px 40px;
+}
+
+.editar-btn {
+  min-width: 150px;
+  background-color: #85D9B6;
+  color: #fff;
+  border: 1px solid #85D9B6;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+  margin: 10px;
+  padding: 10px 40px;
+}

@@ -1,0 +1,167 @@
+<div class="modal-box">
+
+
+    <div class="max-w-xs lg:breadcrumbs m-2 text-xl  ">
+        <ul>
+          <li>
+            <a>
+                <span class="ml-2">Mis Productos / Editar</span>
+            </a>
+          </li> 
+        </ul>
+    </div>
+
+
+    
+    <form method="dialog" class="flex flex-col items-start " [formGroup]="addForm">
+    
+        <label for="name" class="font-light flex flex-row gap-2 text-lg mt-2"><svg class="h-6 w-6" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="currentColor">
+            <path d="M14.119 5.32231C14.7617 5.08694 15.4452 4.98334 16.1287 5.01769C16.8123 5.05203 17.482 5.2236 18.0978 5.5222C18.7137 5.8208 19.2632 6.2403 19.7135 6.75572C20.1638 7.27114 20.5058 7.87193 20.719 8.52229" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+            <path d="M21.919 5.72232C23.1125 5.0195 24.5362 4.81957 25.8771 5.16651C27.218 5.51345 28.3662 6.37886 29.069 7.57233C29.7718 8.76581 29.9717 10.1896 29.6248 11.5305C29.2779 12.8713 28.4124 14.0195 27.219 14.7223C26.3995 15.1972 25.4659 15.4392 24.519 15.4223H7.31901C6.09184 15.4655 4.89024 15.0645 3.93498 14.293C2.97972 13.5214 2.33493 12.4311 2.119 11.2223C1.97306 10.5586 1.96122 9.87244 2.08421 9.20411C2.20719 8.53577 2.46248 7.89876 2.83512 7.33048C3.20777 6.7622 3.69027 6.2741 4.25419 5.8949C4.81812 5.5157 5.45213 5.25304 6.119 5.12232C7.48367 4.85583 8.89841 5.1363 10.0582 5.90326C11.218 6.67023 12.03 7.86225 12.319 9.22232" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+            <path d="M28.819 13.4223V25.4223C28.819 25.9528 28.6083 26.4615 28.2332 26.8365C27.8581 27.2116 27.3495 27.4223 26.819 27.4223H4.91901C4.38857 27.4223 3.87989 27.2116 3.50482 26.8365C3.12975 26.4615 2.91901 25.9528 2.91901 25.4223V13.4223" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" stroke-linejoin="round" />
+        </svg>Nuevo nombre de producto<span class="text-pink-600">*</span></label>
+        <input 
+            formControlName="name"
+            type="text" 
+            class="input input-bordered w-full max-w-lg grow text-lg mt-2" 
+            placeholder="{{productItem.name}}"
+            [value]="productItem.name" 
+            (input)="capitalizeName($event)"
+        />
+        @if(addControls['name'].touched && addControls['name'].invalid) {
+            @if(addControls['name'].errors && addControls['name'].errors['required']){
+                <p class="mt-2  text-pink-600 text-lg">
+                    El nombre es requerido.
+                </p>
+            }
+            @if(addControls['name'].errors && addControls['name'].errors['maxLength']){
+                <p class="mt-2  text-pink-600 text-lg">
+                    Por favor ingrese máximo 50 caracteres.
+                </p>
+            }
+            @if(addControls['name'].errors && addControls['name'].errors['pattern']){
+                <p class="mt-2  text-pink-600 text-lg">
+                    Para el nombre solo considere vocales y consonantes.
+                </p>
+            }
+        }
+
+
+        <label  for="tag" class="font-light flex flex-row gap-2 text-lg mt-2"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-6 w-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9.568 3H5.25A2.25 2.25 0 0 0 3 5.25v4.318c0 .597.237 1.17.659 1.591l9.581 9.581c.699.699 1.78.872 2.607.33a18.095 18.095 0 0 0 5.223-5.223c.542-.827.369-1.908-.33-2.607L11.16 3.66A2.25 2.25 0 0 0 9.568 3Z" />
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 6h.008v.008H6V6Z" />
+          </svg> Nuevo tipo de producto<span class="text-pink-600">*</span></label>
+        <label
+             
+            class="form-control w-full max-w-lg mt-2">
+            <select class="select select-bordered text-lg mt-2" formControlName="tag">
+            <option disabled selected class="text-lg">{{productItem.tag}}</option>
+            @for (tag of tagsService.tags(); track $index) {
+                <option class="text-lg">{{tag.name}}</option>
+            } @empty {
+                <option class="text-lg">No hay datos que mostrar</option>
+            }
+            </select>
+        </label>
+        @if(addControls['tag'].touched && addControls['tag'].invalid) {
+            @if(addControls['tag'].errors && addControls['tag'].errors['required']){
+                <p class="mt-2  text-pink-600 text-lg">
+                    El tipo de producto es requerido.
+                </p>
+            }
+            @if(addControls['tag'].errors && addControls['tag'].errors['maxLength']){
+                <p class="mt-2  text-pink-600 text-lg">
+                    Por favor ingrese máximo 15 caracteres.
+                </p>
+            }
+        }
+
+        <label  for="cost" class="font-light flex flex-row gap-2 text-lg mt-2"><svg width="30" height="30" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M9.5 14.25C9.5 15.22 10.25 16 11.17 16H13.05C13.85 16 14.5 15.32 14.5 14.47C14.5 13.56 14.1 13.23 13.51 13.02L10.5 11.97C9.91 11.76 9.51001 11.44 9.51001 10.52C9.51001 9.68 10.16 8.99001 10.96 8.99001H12.84C13.76 8.99001 14.51 9.77001 14.51 10.74" stroke="#FF2D55" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M12 8V17" stroke="#FF2D55" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M22 12.5C22 18.02 17.52 22.5 12 22.5C6.48 22.5 2 18.02 2 12.5C2 6.98 6.48 2.5 12 2.5" stroke="#FF2D55" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M22 6.5V2.5H18" stroke="#FF2D55" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M17 7.5L22 2.5" stroke="#FF2D55" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>Nuevo costo<span class="text-pink-600 ">*</span></label>
+        <input 
+            formControlName="cost"
+            (input)="positiveCost($event)"
+            type="number" 
+            step="0.01" 
+            class="input input-bordered w-full max-w-lg grow text-lg text-right mt-2" 
+        />
+        @if(addControls['cost'].touched && addControls['cost'].invalid) {
+            @if(addControls['cost'].errors && addControls['cost'].errors['required']){
+                <p class="mt-2  text-pink-600 text-lg">
+                    El costo es requerido.
+                </p>
+            }
+            @if(addControls['cost'].errors && addControls['cost'].errors['min']){
+                <p class="mt-2  text-pink-600 text-lg">
+                    El costo debe ser mayor a 0.
+                </p>
+            }
+        }
+
+        <label for="price"  class="font-light flex flex-row gap-2 text-lg mt-2"><svg width="30" height="30" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M9.5 14.25C9.5 15.22 10.25 16 11.17 16H13.05C13.85 16 14.5 15.32 14.5 14.47C14.5 13.56 14.1 13.23 13.51 13.02L10.5 11.97C9.91 11.76 9.51001 11.44 9.51001 10.52C9.51001 9.68 10.16 8.99001 10.96 8.99001H12.84C13.76 8.99001 14.51 9.77001 14.51 10.74" stroke="#32D74B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M12 8V17" stroke="#32D74B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M22 12.5C22 18.02 17.52 22.5 12 22.5C6.48 22.5 2 18.02 2 12.5C2 6.98 6.48 2.5 12 2.5" stroke="#32D74B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M17 3.5V7.5H21" stroke="#32D74B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M22 2.5L17 7.5" stroke="#32D74B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            Nuevo precio<span class="text-pink-600">*</span>
+        </label>
+        <input 
+            formControlName="price"
+            (input)="positivePrice($event)"
+            type="number" 
+            step="0.01" 
+            class="input input-bordered w-full max-w-lg grow text-lg text-right mt-2" 
+        />
+        @if(addControls['price'].touched && addControls['price'].invalid) {
+            @if(addControls['price'].errors && addControls['price'].errors['required']){
+                <p class="mt-2  text-pink-600 text-lg">
+                    El costo es requerido.
+                </p>
+            }
+            @if(addControls['price'].errors && addControls['price'].errors['min']){
+                <p class="mt-2  text-pink-600 text-lg">
+                    El costo debe ser mayor a 0.
+                </p>
+            }
+        }
+
+
+
+        <label  for="utility" class="font-light flex flex-row gap-2 text-lg mt-2"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="25" height="25" fill="#fbc02d">
+            <path d="M0 405.3V448c0 35.3 86 64 192 64s192-28.7 192-64v-42.7C342.7 434.4 267.2 448 192 448S41.3 434.4 0 405.3zM320 128c106 0 192-28.7 192-64S426 0 320 0 128 28.7 128 64s86 64 192 64zM0 300.4V352c0 35.3 86 64 192 64s192-28.7 192-64v-51.6c-41.3 34-116.9 51.6-192 51.6S41.3 334.4 0 300.4zm416 11c57.3-11.1 96-31.7 96-55.4v-42.7c-23.2 16.4-57.3 27.6-96 34.5v63.6zM192 160C86 160 0 195.8 0 240s86 80 192 80 192-35.8 192-80-86-80-192-80zm219.3 56.3c60-10.8 100.7-32 100.7-56.3v-42.7c-35.5 25.1-96.5 38.6-160.7 41.8 29.5 14.3 51.2 33.5 60 57.2z"/>
+            </svg>
+            Nueva utilidad<span class="text-pink-600">*</span>
+        </label>
+        <input 
+            id="utility"
+            type="text" 
+            placeholder="You can't touch this" 
+            class="input input-bordered w-full max-w-lg text-right mt-2" 
+            [placeholder]="placeholderText"
+            disabled 
+        />
+
+        <label class="font-light flex flex-row gap-2 text-lg mt-2"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="m2.25 15.75 5.159-5.159a2.25 2.25 0 0 1 3.182 0l5.159 5.159m-1.5-1.5 1.409-1.409a2.25 2.25 0 0 1 3.182 0l2.909 2.909m-18 3.75h16.5a1.5 1.5 0 0 0 1.5-1.5V6a1.5 1.5 0 0 0-1.5-1.5H3.75A1.5 1.5 0 0 0 2.25 6v12a1.5 1.5 0 0 0 1.5 1.5Zm10.5-11.25h.008v.008h-.008V8.25Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z" />
+          </svg>
+          Nueva imagen<span class="text-pink-600">*</span>
+        </label>
+        <app-image-upload [imageURL]=productItem.img ></app-image-upload>
+        
+
+       
+
+        <div class="modal-action justify-center items-center">
+            <button type="submit" class="btn btn-info m-2 btn-md md:btn-md lg:btn-lg xl:btn-xl text-lg" (click)="onSubmit()"> Editar </button>
+            <button class="btn btn-outline btn-error border-dashed m-2 btn-md md:btn-md lg:btn-lg xl:btn-xl text-lg" (click)="onReset()">Cancelar</button>
+        </div>
+    </form>
+</div>
+

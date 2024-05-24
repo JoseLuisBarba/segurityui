@@ -1,0 +1,25 @@
+<div class="modal-box w-auto">
+    <div class="xl:breadcrumbs m-2 text-xl ">
+        <ul>
+          <li>
+            <a>
+                <span class="ml-2">Producción / Eliminar</span>
+            </a>
+          </li> 
+        </ul>
+    </div>
+    <label for="name" class="font-light flex flex-row items-center justify-center gap-2 text-lg mt-2 text-warning"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-20 h-20">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126ZM12 15.75h.007v.008H12v-.008Z" />
+      </svg><span class="text-pink-600"></span>
+    </label>
+    <p for="name" class="font-light  text-lg mt-2">
+        ¿Estás seguro de eliminar a  <span class="text-pink-600 font-bold">{{productItem?.name }}</span> <span class="text-pink-600 font-bold">{{ productItem?.creationDate | date: 'yyyy-MM-dd' }} </span> ?
+    </p> 
+    <form method="dialog" class="flex flex-col items-center justify-center " >
+        <div class="modal-action">
+            <button type="submit" (click)="delete()" class="btn btn-outline btn-error border-dashed m-2 btn-md md:btn-md lg:btn-lg xl:btn-xl text-lg"> Eliminar </button>
+            <button class="btn btn-info m-2 btn-md md:btn-md lg:btn-lg xl:btn-xl text-lg" >Cancelar</button>
+        </div>
+    </form>
+</div>
+

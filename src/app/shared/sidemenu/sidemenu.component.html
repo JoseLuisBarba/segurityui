@@ -1,0 +1,246 @@
+
+<!-- 
+
+    @for (item of menuItems; track $index) {
+        <li><a [routerLink]="item.path">{{item.title}}</a></li>
+    } @empty {
+        <li><a>No hay opciones</a></li>
+    }
+
+    
+</div> -->
+
+
+
+
+
+
+<div class="ms:drawer-open drawer z-40 bg-base-200">
+
+
+    <input id="my-drawer-desktop" type="checkbox" class="drawer-toggle" />
+
+
+
+
+    <div class="drawer-content flex flex-row items-center justify-center">
+
+      <ul class="menu menu-vertical  flex max-w-20 items-center justify-center rounded-box bg-base-200">
+
+
+        <li>
+            <label for="my-drawer-desktop" class="ms:hidden drawer-butt tooltip tooltip-right on"  data-tip="Mostrar Menú" >
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-6 w-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                </svg>
+            </label>
+        </li>
+
+        
+        <li><div class="divider"></div></li>
+        <li [routerLink]="['productos']">
+          <a [routerLink]="['productos']" class="tooltip tooltip-right" data-tip="Mis Productos">
+            <div class="indicator">
+              <span class="badge indicator-item badge-secondary badge-xs"></span>
+              <svg class="h-6 w-6" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="currentColor">
+                <path d="M14.119 5.32231C14.7617 5.08694 15.4452 4.98334 16.1287 5.01769C16.8123 5.05203 17.482 5.2236 18.0978 5.5222C18.7137 5.8208 19.2632 6.2403 19.7135 6.75572C20.1638 7.27114 20.5058 7.87193 20.719 8.52229" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+                <path d="M21.919 5.72232C23.1125 5.0195 24.5362 4.81957 25.8771 5.16651C27.218 5.51345 28.3662 6.37886 29.069 7.57233C29.7718 8.76581 29.9717 10.1896 29.6248 11.5305C29.2779 12.8713 28.4124 14.0195 27.219 14.7223C26.3995 15.1972 25.4659 15.4392 24.519 15.4223H7.31901C6.09184 15.4655 4.89024 15.0645 3.93498 14.293C2.97972 13.5214 2.33493 12.4311 2.119 11.2223C1.97306 10.5586 1.96122 9.87244 2.08421 9.20411C2.20719 8.53577 2.46248 7.89876 2.83512 7.33048C3.20777 6.7622 3.69027 6.2741 4.25419 5.8949C4.81812 5.5157 5.45213 5.25304 6.119 5.12232C7.48367 4.85583 8.89841 5.1363 10.0582 5.90326C11.218 6.67023 12.03 7.86225 12.319 9.22232" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+                <path d="M28.819 13.4223V25.4223C28.819 25.9528 28.6083 26.4615 28.2332 26.8365C27.8581 27.2116 27.3495 27.4223 26.819 27.4223H4.91901C4.38857 27.4223 3.87989 27.2116 3.50482 26.8365C3.12975 26.4615 2.91901 25.9528 2.91901 25.4223V13.4223" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" stroke-linejoin="round" />
+              </svg>
+            </div>
+          </a>
+        </li>
+        <li [routerLink]="['produccion']">
+          <a [routerLink]="['produccion']" class="tooltip tooltip-right" data-tip="Producir">
+            <svg fill="none" viewBox="0 0 32 32" stroke-width="2" stroke="currentColor" class="h-6 w-6">
+              <path d="M9.10004 12.6412C8.65643 11.6669 8.41814 10.6116 8.40002 9.54121C8.61053 7.73958 9.47539 6.07801 10.8304 4.87212C12.1854 3.66622 13.9361 3 15.75 3C17.5639 3 19.3146 3.66622 20.6696 4.87212C22.0246 6.07801 22.8895 7.73958 23.1 9.54121C23.0711 10.6103 22.8333 11.6634 22.4 12.6412" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+              <path d="M8.00002 21.1412C6.31394 20.8361 4.78891 19.9476 3.69197 18.6313C2.59504 17.3149 1.9961 15.6547 2.00002 13.9412C2.00002 9.94122 4.70003 7.44122 8.70003 7.44122" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+              <path d="M22.7 7.44122C26.8 7.44122 29.5 9.94122 29.5 13.9412C29.5039 15.6547 28.905 17.3149 27.808 18.6313C26.7111 19.9476 25.1861 20.8361 23.5 21.1412" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+              <path d="M8 21.1412V28.7412H23.4V21.1412" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" />
+              <path d="M8 24.9412H23.4" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+              <path d="M15.7 24.9412V20.9412" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a class="tooltip tooltip-right" data-tip="Ventas">
+            <svg class="h-6 w-6" viewBox="0 0 26 27" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="currentColor">
+              <path d="M22.7607 12.655V17.5191C22.7607 22.3833 20.8215 24.3333 15.9465 24.3333H10.1074C9.47906 24.3333 8.90486 24.3009 8.37402 24.225" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+              <path d="M3.29321 17.3134V12.655" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+              <path d="M13.0326 13.5C15.0151 13.5 16.4776 11.8859 16.2826 9.90339L15.5567 2.66667H10.4975L9.77173 9.90339C9.57673 11.8859 11.0501 13.5 13.0326 13.5Z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+              <path d="M19.8576 13.5C22.0459 13.5 23.6493 11.7233 23.4326 9.54581L23.1292 6.56664C22.7392 3.74997 21.6559 2.66667 18.8176 2.66667H15.5134L16.2718 10.2608C16.4668 12.0483 18.0701 13.5 19.8576 13.5Z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+              <path d="M6.14244 13.5C7.92994 13.5 9.54409 12.0483 9.71743 10.2608L9.9558 7.86672L10.4758 2.66667H7.17162C4.33329 2.66667 3.24997 3.74997 2.85997 6.56664L2.55661 9.54581C2.33994 11.7233 3.95411 13.5 6.14244 13.5Z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+              <path d="M9.74992 21.0833C9.74992 21.8958 9.5224 22.6651 9.12157 23.3151C8.91573 23.6617 8.66656 23.9759 8.37406 24.225C8.34156 24.2684 8.30909 24.3008 8.26576 24.3333C7.50742 25.0158 6.51075 25.4167 5.41659 25.4167C4.09492 25.4167 2.91405 24.8208 2.13405 23.8891C2.11239 23.8566 2.07995 23.835 2.05828 23.8025C1.92828 23.6508 1.8091 23.4884 1.7116 23.3151C1.31077 22.6651 1.08325 21.8958 1.08325 21.0833C1.08325 19.7183 1.71159 18.4942 2.70825 17.7033C2.89242 17.5517 3.08739 17.4217 3.29323 17.3134C3.92156 16.9559 4.64742 16.75 5.41659 16.75C6.49992 16.75 7.47489 17.14 8.23323 17.8008C8.36323 17.8983 8.48241 18.0175 8.59074 18.1367C9.30574 18.9167 9.74992 19.9458 9.74992 21.0833Z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+              <path d="M7.0308 21.0616H3.80249" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+              <path d="M5.41675 19.48V22.7192" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+            </svg>
+          </a>
+        </li>
+        <li [routerLink]="['reporte']">
+          <a  [routerLink]="['reporte']" class="tooltip tooltip-right" data-tip="Reportes">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-6 w-6">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M7.5 14.25v2.25m3-4.5v4.5m3-6.75v6.75m3-9v9M6 20.25h12A2.25 2.25 0 0 0 20.25 18V6A2.25 2.25 0 0 0 18 3.75H6A2.25 2.25 0 0 0 3.75 6v12A2.25 2.25 0 0 0 6 20.25Z" />
+            </svg>
+          </a>
+        </li>
+        <li [routerLink]="['micuenta']">
+          <a [routerLink]="['micuenta']" class="tooltip tooltip-right" data-tip="Usuario">
+            <div class="avatar">
+              <div class="w-6 rounded-full ring ring-primary ring-offset-0 ring-offset-base-100">
+                <img src="https://daisyui.com/images/stock/photo-1635805737707-575885ab0820.jpg" />
+              </div>
+            </div>
+          </a>
+        </li>
+        <li><div class="divider"></div></li>
+        <li>
+          <li>
+            <div class="dropdown dropdown-right drop-shadow-xs" >
+                <div tabindex="0" role="button" class="btn btn-xs" data-tip="Paleta"> 
+                  <svg width="25" height="25" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="currentColor">
+                    <path d="M25.0963 6.73626C22.6759 4.33949 19.4063 2.99651 16 3.00001H15.8663C12.4417 3.03524 9.16932 4.42042 6.7602 6.85459C4.35108 9.28875 2.99982 12.5752 3 16C3 21.375 6.3225 25.8825 11.67 27.7713C12.2731 27.9839 12.9185 28.0488 13.5519 27.9606C14.1853 27.8724 14.7883 27.6335 15.3104 27.2641C15.8324 26.8948 16.2583 26.4056 16.5523 25.8376C16.8463 25.2697 16.9998 24.6395 17 24C17 23.4696 17.2107 22.9609 17.5858 22.5858C17.9609 22.2107 18.4696 22 19 22H24.7763C25.6836 22.0044 26.5652 21.6983 27.2746 21.1326C27.984 20.5669 28.4786 19.7756 28.6763 18.89C28.8998 17.9059 29.0084 16.8992 29 15.89C28.9873 14.1818 28.6357 12.4932 27.9656 10.9219C27.2955 9.35058 26.3202 7.92789 25.0963 6.73626ZM26.7213 18.45C26.6219 18.8912 26.375 19.2853 26.0214 19.5671C25.6677 19.8489 25.2285 20.0017 24.7763 20H19C17.9391 20 16.9217 20.4214 16.1716 21.1716C15.4214 21.9217 15 22.9391 15 24C14.9995 24.3195 14.9226 24.6342 14.7755 24.9178C14.6285 25.2014 14.4156 25.4456 14.1548 25.63C13.894 25.8145 13.5927 25.9338 13.2764 25.9779C12.96 26.0221 12.6376 25.9898 12.3363 25.8838C7.81125 24.2875 5 20.5 5 16C4.99985 13.1022 6.14314 10.3214 8.18151 8.26177C10.2199 6.20211 12.9886 5.02997 15.8862 5.00001H15.9987C18.8965 5.01126 21.6737 6.16098 23.7315 8.20121C25.7892 10.2414 26.9627 13.0087 26.9988 15.9063C27.0062 16.7618 26.9148 17.6154 26.7262 18.45H26.7213ZM17.5 9.50001C17.5 9.79668 17.412 10.0867 17.2472 10.3334C17.0824 10.58 16.8481 10.7723 16.574 10.8858C16.2999 10.9994 15.9983 11.0291 15.7074 10.9712C15.4164 10.9133 15.1491 10.7704 14.9393 10.5607C14.7296 10.3509 14.5867 10.0836 14.5288 9.79264C14.4709 9.50167 14.5006 9.20007 14.6142 8.92598C14.7277 8.65189 14.92 8.41762 15.1666 8.2528C15.4133 8.08798 15.7033 8.00001 16 8.00001C16.3978 8.00001 16.7794 8.15804 17.0607 8.43935C17.342 8.72065 17.5 9.10218 17.5 9.50001ZM12 12.5C12 12.7967 11.912 13.0867 11.7472 13.3334C11.5824 13.58 11.3481 13.7723 11.074 13.8858C10.7999 13.9994 10.4983 14.0291 10.2074 13.9712C9.91639 13.9133 9.64912 13.7704 9.43934 13.5607C9.22956 13.3509 9.0867 13.0836 9.02882 12.7926C8.97094 12.5017 9.00065 12.2001 9.11418 11.926C9.22771 11.6519 9.41997 11.4176 9.66665 11.2528C9.91332 11.088 10.2033 11 10.5 11C10.8978 11 11.2794 11.158 11.5607 11.4393C11.842 11.7207 12 12.1022 12 12.5ZM12 19.5C12 19.7967 11.912 20.0867 11.7472 20.3334C11.5824 20.58 11.3481 20.7723 11.074 20.8858C10.7999 20.9994 10.4983 21.0291 10.2074 20.9712C9.91639 20.9133 9.64912 20.7704 9.43934 20.5607C9.22956 20.3509 9.0867 20.0836 9.02882 19.7926C8.97094 19.5017 9.00065 19.2001 9.11418 18.926C9.22771 18.6519 9.41997 18.4176 9.66665 18.2528C9.91332 18.088 10.2033 18 10.5 18C10.8978 18 11.2794 18.158 11.5607 18.4393C11.842 18.7207 12 19.1022 12 19.5ZM23 12.5C23 12.7967 22.912 13.0867 22.7472 13.3334C22.5824 13.58 22.3481 13.7723 22.074 13.8858C21.7999 13.9994 21.4983 14.0291 21.2074 13.9712C20.9164 13.9133 20.6491 13.7704 20.4393 13.5607C20.2296 13.3509 20.0867 13.0836 20.0288 12.7926C19.9709 12.5017 20.0007 12.2001 20.1142 11.926C20.2277 11.6519 20.42 11.4176 20.6666 11.2528C20.9133 11.088 21.2033 11 21.5 11C21.8978 11 22.2794 11.158 22.5607 11.4393C22.842 11.7207 23 12.1022 23 12.5Z" fill="#343330"/>
+                  </svg>
+                </div>
+                <ul tabindex="0" class="dropdown-content z-[1] p-2 shadow-2xl bg-base-300 rounded-box w-52">
+                  <li><input type="radio" name="theme-dropdown" class="theme-controller btn btn-sm btn-block btn-ghost justify-start" aria-label="Estandar" value="default"/></li>
+                  <li><input type="radio" name="theme-dropdown" class="theme-controller btn btn-sm btn-block btn-ghost justify-start" aria-label="Oscuro" value="dark"/></li>
+                  <li><input type="radio" name="theme-dropdown" class="theme-controller btn btn-sm btn-block btn-ghost justify-start" aria-label="Claro" value="light"/></li>
+                  <li><input type="radio" name="theme-dropdown" class="theme-controller btn btn-sm btn-block btn-ghost justify-start" aria-label="Cupcake" value="cupcake"/></li>
+                  <li><input type="radio" name="theme-dropdown" class="theme-controller btn btn-sm btn-block btn-ghost justify-start" aria-label="Retro" value="retro"/></li>
+                  <li><input type="radio" name="theme-dropdown" class="theme-controller btn btn-sm btn-block btn-ghost justify-start" aria-label="Cyberpunk" value="cyberpunk"/></li>
+                  <li><input type="radio" name="theme-dropdown" class="theme-controller btn btn-sm btn-block btn-ghost justify-start" aria-label="Valentine" value="valentine"/></li>
+                  <li><input type="radio" name="theme-dropdown" class="theme-controller btn btn-sm btn-block btn-ghost justify-start" aria-label="Agua" value="aqua"/></li>
+                </ul>
+            </div>
+          </li>
+        <li [routerLink]="['micuenta']">
+          <a [routerLink]="['micuenta']" class="tooltip tooltip-right" data-tip="Cerrar sesión">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-6 w-6">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 9V5.25A2.25 2.25 0 0 1 10.5 3h6a2.25 2.25 0 0 1 2.25 2.25v13.5A2.25 2.25 0 0 1 16.5 21h-6a2.25 2.25 0 0 1-2.25-2.25V15m-3 0-3-3m0 0 3-3m-3 3H15" />
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+
+    <div class="drawer-side z-50 ">
+      <label for="my-drawer-desktop" aria-label="close sidebar" class="drawer-overlay"></label>
+  
+      <ul class="w-65 menu min-h-full bg-base-200 p-4 text-base-content">
+        <!-- Sidebar content here -->
+        <li>
+          <a [routerLink]="['micuenta']" class="tooltip tooltip-right" data-tip="Usuario">
+            <div class="card-body items-center text-center">
+              <h2 class="card-title text-3xl">PEPE'S</h2>
+              <p class="mb-3">Naturales y deliciosos.</p>
+              <a [routerLink]="['micuenta']" class="avatar online">
+                <div class="w-24 rounded-full">
+                  <img src="https://daisyui.com/images/stock/photo-1635805737707-575885ab0820.jpg" />
+                </div>
+              </a>
+              <h3 class="text-lg">Hola, <span class="badge badge-lg text-info">José Luis Barba Farro</span></h3>
+            </div>
+          </a>
+        </li>
+        <li [routerLink]="['productos']">
+          <a [routerLink]="['productos']" class="text-lg">
+            <svg class="h-6 w-6" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="currentColor">
+              <path d="M14.119 5.32231C14.7617 5.08694 15.4452 4.98334 16.1287 5.01769C16.8123 5.05203 17.482 5.2236 18.0978 5.5222C18.7137 5.8208 19.2632 6.2403 19.7135 6.75572C20.1638 7.27114 20.5058 7.87193 20.719 8.52229" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+              <path d="M21.919 5.72232C23.1125 5.0195 24.5362 4.81957 25.8771 5.16651C27.218 5.51345 28.3662 6.37886 29.069 7.57233C29.7718 8.76581 29.9717 10.1896 29.6248 11.5305C29.2779 12.8713 28.4124 14.0195 27.219 14.7223C26.3995 15.1972 25.4659 15.4392 24.519 15.4223H7.31901C6.09184 15.4655 4.89024 15.0645 3.93498 14.293C2.97972 13.5214 2.33493 12.4311 2.119 11.2223C1.97306 10.5586 1.96122 9.87244 2.08421 9.20411C2.20719 8.53577 2.46248 7.89876 2.83512 7.33048C3.20777 6.7622 3.69027 6.2741 4.25419 5.8949C4.81812 5.5157 5.45213 5.25304 6.119 5.12232C7.48367 4.85583 8.89841 5.1363 10.0582 5.90326C11.218 6.67023 12.03 7.86225 12.319 9.22232" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+              <path d="M28.819 13.4223V25.4223C28.819 25.9528 28.6083 26.4615 28.2332 26.8365C27.8581 27.2116 27.3495 27.4223 26.819 27.4223H4.91901C4.38857 27.4223 3.87989 27.2116 3.50482 26.8365C3.12975 26.4615 2.91901 25.9528 2.91901 25.4223V13.4223" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" stroke-linejoin="round" />
+            </svg>
+            Mis productos
+            <span class="badge indicator-item badge-info"></span>
+          </a>
+        </li>
+        <li [routerLink]="['produccion']">
+          <a [routerLink]="['produccion']" class="text-lg">
+            <svg fill="none" viewBox="0 0 32 32" stroke-width="2" stroke="currentColor" class="h-6 w-6">
+              <path d="M9.10004 12.6412C8.65643 11.6669 8.41814 10.6116 8.40002 9.54121C8.61053 7.73958 9.47539 6.07801 10.8304 4.87212C12.1854 3.66622 13.9361 3 15.75 3C17.5639 3 19.3146 3.66622 20.6696 4.87212C22.0246 6.07801 22.8895 7.73958 23.1 9.54121C23.0711 10.6103 22.8333 11.6634 22.4 12.6412" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+              <path d="M8.00002 21.1412C6.31394 20.8361 4.78891 19.9476 3.69197 18.6313C2.59504 17.3149 1.9961 15.6547 2.00002 13.9412C2.00002 9.94122 4.70003 7.44122 8.70003 7.44122" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+              <path d="M22.7 7.44122C26.8 7.44122 29.5 9.94122 29.5 13.9412C29.5039 15.6547 28.905 17.3149 27.808 18.6313C26.7111 19.9476 25.1861 20.8361 23.5 21.1412" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+              <path d="M8 21.1412V28.7412H23.4V21.1412" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" />
+              <path d="M8 24.9412H23.4" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+              <path d="M15.7 24.9412V20.9412" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+            </svg>
+            Producir
+          </a>
+        </li>
+        <li>
+          <a class="text-lg">
+            <svg class="h-6 w-6" viewBox="0 0 26 27" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="currentColor">
+              <path d="M22.7607 12.655V17.5191C22.7607 22.3833 20.8215 24.3333 15.9465 24.3333H10.1074C9.47906 24.3333 8.90486 24.3009 8.37402 24.225" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+              <path d="M3.29321 17.3134V12.655" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+              <path d="M13.0326 13.5C15.0151 13.5 16.4776 11.8859 16.2826 9.90339L15.5567 2.66667H10.4975L9.77173 9.90339C9.57673 11.8859 11.0501 13.5 13.0326 13.5Z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+              <path d="M19.8576 13.5C22.0459 13.5 23.6493 11.7233 23.4326 9.54581L23.1292 6.56664C22.7392 3.74997 21.6559 2.66667 18.8176 2.66667H15.5134L16.2718 10.2608C16.4668 12.0483 18.0701 13.5 19.8576 13.5Z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+              <path d="M6.14244 13.5C7.92994 13.5 9.54409 12.0483 9.71743 10.2608L9.9558 7.86672L10.4758 2.66667H7.17162C4.33329 2.66667 3.24997 3.74997 2.85997 6.56664L2.55661 9.54581C2.33994 11.7233 3.95411 13.5 6.14244 13.5Z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+              <path d="M9.74992 21.0833C9.74992 21.8958 9.5224 22.6651 9.12157 23.3151C8.91573 23.6617 8.66656 23.9759 8.37406 24.225C8.34156 24.2684 8.30909 24.3008 8.26576 24.3333C7.50742 25.0158 6.51075 25.4167 5.41659 25.4167C4.09492 25.4167 2.91405 24.8208 2.13405 23.8891C2.11239 23.8566 2.07995 23.835 2.05828 23.8025C1.92828 23.6508 1.8091 23.4884 1.7116 23.3151C1.31077 22.6651 1.08325 21.8958 1.08325 21.0833C1.08325 19.7183 1.71159 18.4942 2.70825 17.7033C2.89242 17.5517 3.08739 17.4217 3.29323 17.3134C3.92156 16.9559 4.64742 16.75 5.41659 16.75C6.49992 16.75 7.47489 17.14 8.23323 17.8008C8.36323 17.8983 8.48241 18.0175 8.59074 18.1367C9.30574 18.9167 9.74992 19.9458 9.74992 21.0833Z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+              <path d="M7.0308 21.0616H3.80249" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+              <path d="M5.41675 19.48V22.7192" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+            </svg>
+            Ventas
+          </a>
+        </li>
+        <li>
+          <a class="text-lg">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-6 w-6">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9.568 3H5.25A2.25 2.25 0 0 0 3 5.25v4.318c0 .597.237 1.17.659 1.591l9.581 9.581c.699.699 1.78.872 2.607.33a18.095 18.095 0 0 0 5.223-5.223c.542-.827.369-1.908-.33-2.607L11.16 3.66A2.25 2.25 0 0 0 9.568 3Z" />
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6 6h.008v.008H6V6Z" />
+            </svg>
+            Categorías
+          </a>
+        </li>
+        <li [routerLink]="['reporte']">
+          <a [routerLink]="['reporte']" class="text-lg">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-6 w-6">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M7.5 14.25v2.25m3-4.5v4.5m3-6.75v6.75m3-9v9M6 20.25h12A2.25 2.25 0 0 0 20.25 18V6A2.25 2.25 0 0 0 18 3.75H6A2.25 2.25 0 0 0 3.75 6v12A2.25 2.25 0 0 0 6 20.25Z" />
+            </svg>
+            Reportes
+          </a>
+        </li>
+        <li>
+          <div class="divider"></div>
+        </li>
+        <li>
+          <a class="text-lg">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-6 w-6">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9.594 3.94c.09-.542.56-.94 1.11-.94h2.593c.55 0 1.02.398 1.11.94l.213 1.281c.063.374.313.686.645.87.074.04.147.083.22.127.325.196.72.257 1.075.124l1.217-.456a1.125 1.125 0 0 1 1.37.49l1.296 2.247a1.125 1.125 0 0 1-.26 1.431l-1.003.827c-.293.241-.438.613-.43.992a7.723 7.723 0 0 1 0 .255c-.008.378.137.75.43.991l1.004.827c.424.35.534.955.26 1.43l-1.298 2.247a1.125 1.125 0 0 1-1.369.491l-1.217-.456c-.355-.133-.75-.072-1.076.124a6.47 6.47 0 0 1-.22.128c-.331.183-.581.495-.644.869l-.213 1.281c-.09.543-.56.94-1.11.94h-2.594c-.55 0-1.019-.398-1.11-.94l-.213-1.281c-.062-.374-.312-.686-.644-.87a6.52 6.52 0 0 1-.22-.127c-.325-.196-.72-.257-1.076-.124l-1.217.456a1.125 1.125 0 0 1-1.369-.49l-1.297-2.247a1.125 1.125 0 0 1 .26-1.431l1.004-.827c.292-.24.437-.613.43-.991a6.932 6.932 0 0 1 0-.255c.007-.38-.138-.751-.43-.992l-1.004-.827a1.125 1.125 0 0 1-.26-1.43l1.297-2.247a1.125 1.125 0 0 1 1.37-.491l1.216.456c.356.133.751.072 1.076-.124.072-.044.146-.086.22-.128.332-.183.582-.495.644-.869l.214-1.28Z" />
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+            </svg>
+  
+            Ajustes
+          </a>
+        </li>
+        <li>
+          <a class="text-lg">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-6 w-6">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 1.172 1.025 1.172 2.687 0 3.712-.203.179-.43.326-.67.442-.745.361-1.45.999-1.45 1.827v.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9 5.25h.008v.008H12v-.008Z" />
+            </svg>
+            Ayuda
+          </a>
+        </li>
+        <li><div class="divider"></div></li>
+        <li>
+          <a class="text-lg">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-6 w-6">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 9V5.25A2.25 2.25 0 0 1 10.5 3h6a2.25 2.25 0 0 1 2.25 2.25v13.5A2.25 2.25 0 0 1 16.5 21h-6a2.25 2.25 0 0 1-2.25-2.25V15m-3 0-3-3m0 0 3-3m-3 3H15" />
+            </svg>
+            Cerrar sesón
+          </a>
+        </li>
+      </ul>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+

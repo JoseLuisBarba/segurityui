@@ -1,0 +1,38 @@
+<article class="flex max-w-4xl flex-col items-start justify-between border border-gray-300 rounded-md p-4 m-4">
+    <div class="relative mt-2 flex flex-col sm:flex-row items-start gap-x-4">
+        <img [src]="imageUrl" alt="" class="h-40 w-40 rounded-full bg-gray-50 order-1 sm:order-none rounded-tr-3xl rounded-br-3xl rounded-bl-3xl rounded-tl-none">
+        <div class="text-sm leading-6 order-2">
+            <p class="font-semibold text-gray-900">
+                <a href="#">
+                    <span class="absolute inset-0"></span>
+                    ABC-123
+                </a>
+            </p>
+            <p class="text-gray-600">Nissan Frontier</p>
+            <div class="flex items-center gap-x-4 text-xs">
+                <time datetime="2020-03-16" class="text-gray-500">Feb 01, 2024</time>
+                <p href="#" class="relative z-10 rounded-full bg-gray-50 px-3 py-1.5 font-medium text-gray-600 hover:bg-gray-100">25 km/h Avg</p>
+            </div>
+            <div class="group relative">
+                <h3 class="mt-3 text-lg font-semibold leading-6 text-gray-900 group-hover:text-gray-600">           
+                    <a href="#">
+                        <span class="absolute inset-0"></span>
+                        Información
+                    </a>
+                </h3>
+                <div class="flex items-center gap-x-2">
+                    <img [src]="imageSkill" width="15" height="15">
+                    <p class="mt-1 line-clamp-3 text-sm leading-6 text-gray-600">  personas máximo</p>
+                </div>
+                <div class="flex items-center gap-x-2">
+                    <img [src]="imageFlete" width="15" height="15">
+                    <p class="mt-1 line-clamp-3 text-sm leading-6 text-gray-600">  $ 10 por km</p>
+                </div>        
+            </div>
+        </div>
+        <div class="flex  flex-col text-sm leading-6 order-3">
+            <button class="editar-btn">Editar</button>
+            <button class="eliminar-btn">Eliminar</button>
+        </div>
+    </div>
+</article>

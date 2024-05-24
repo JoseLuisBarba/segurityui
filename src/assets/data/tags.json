@@ -1,0 +1,35 @@
+{
+    "data": [
+        {
+          "id": "aoiwaif232342deq22346t5ey34623",
+          "name": "Carnes",
+          "removed": false,
+          "creationDate": "2024-04-07T12:00:00Z",
+          "modificationDate": "2024-04-07T12:00:00Z"
+        },
+        {
+            "id": "aoiwaif232342deq22346t5ey34623",
+            "name": "Pastelería",
+            "removed": false,
+            "creationDate": "2024-04-07T12:00:00Z",
+            "modificationDate": "2024-04-07T12:00:00Z"
+        },
+        {
+            "id": "aoiwaif232342deq22346t5ey34623",
+            "name": "Lacteos",
+            "removed": false,
+            "creationDate": "2024-04-07T12:00:00Z",
+            "modificationDate": "2024-04-07T12:00:00Z"
+        },
+        {
+            "id": "aoiwaif232342deq22346t5ey34623",
+            "name": "Panes",
+            "removed": false,
+            "creationDate": "2024-04-07T12:00:00Z",
+            "modificationDate": "2024-04-07T12:00:00Z"
+        }
+        
+    ]
+      
+}
+  

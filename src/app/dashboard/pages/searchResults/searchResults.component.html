@@ -1,0 +1,35 @@
+<p>{{isLoadingPlaces}}</p>
+
+@if (isLoadingPlaces) {
+    <div class="alert slert-primary mt-2 text-center">
+        <h6>Cargando ...</h6>
+        <span>Espere por favor ...</span>
+    </div>
+}
+
+
+@if (places.length > 0) {
+    <ul class="list mt-2">
+    @for (place of  places; track $index) {
+        
+            <li class="list-item cursor-pointer pointer"
+                [class.active]="place.id===selectedId"
+            >
+                <h6>{{place.text_es}}</h6>
+                <p>
+                    {{place.place_name}}
+                </p>
+                <button 
+                    (click)="flyTo(place)" 
+                    (click)="getDirections(place)"
+                    class="btn btn-sm btn-outline-primary"
+                >
+                    Direcciones
+                </button>
+            </li>
+        
+    }
+    </ul>
+}
+
+

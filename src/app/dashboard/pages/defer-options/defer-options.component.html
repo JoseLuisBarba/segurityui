@@ -1,0 +1,97 @@
+<app-title title="Defer Triggers" />
+
+<section>
+    <h1 class="text-xl"> Interacciones</h1>
+    <hr class="my-2"> 
+    @defer (on interaction) {
+        <app-heavy-loaders-fast cssClass="bg-blue-500 h-20">
+            <span>On interaction</span>
+        </app-heavy-loaders-fast>
+    } @placeholder {
+        <div class="w-full h-20 bg-purple-100">
+            <span>Click en el div!</span>
+        </div>
+    }
+    
+</section>
+
+
+<section>
+    <hr class="my-2"> 
+    <button 
+        #btnInteraction
+        class="p-2 bg-blue-200 hover:bg-blue-800 transition-all rounded text-white my-2">
+        click me!
+    </button>
+    @defer (on interaction(btnInteraction)) {
+        <app-heavy-loaders-fast cssClass="bg-indigo-500 h-20">
+            <span>On interaction</span>
+        </app-heavy-loaders-fast>
+    } @placeholder {
+        <div class="w-full h-20 bg-purple-100">
+            <span>Place holder div!</span>
+        </div>
+    }
+    
+</section>
+
+
+<section>
+    <hr class="my-2"> 
+    <button 
+        #btnInteraction2
+        class="p-2 bg-blue-200 hover:bg-blue-800 transition-all rounded text-white my-2">
+        click me!
+    </button>
+    @defer (on hover(btnInteraction2)) {
+        <app-heavy-loaders-fast cssClass="bg-indigo-500 h-20">
+            <span>On interaction</span>
+        </app-heavy-loaders-fast>
+    } @placeholder {
+        <div class="w-full h-20 bg-purple-100">
+            <span>Place holder div!</span>
+        </div>
+    }
+</section>
+
+
+<section>
+    <hr class="my-2"> 
+    @defer (on immediate) {
+        <app-heavy-loaders-fast cssClass="bg-indigo-500 h-20">
+            <span>On interaction</span>
+        </app-heavy-loaders-fast>
+    } @placeholder {
+        <div class="w-full h-20 bg-purple-100">
+            <span>Place holder div!</span>
+        </div>
+    }
+</section>
+
+
+<section>
+    <hr class="my-2"> 
+    @defer (on timer(3000)) {
+        <app-heavy-loaders-fast cssClass="bg-pink-500 h-20">
+            <span>On interaction</span>
+        </app-heavy-loaders-fast>
+    } @placeholder {
+        <div class="w-full h-20 bg-pink-100">
+            <span>3 seg</span>
+        </div>
+    }
+</section>
+
+
+<section>
+    <hr class="my-2"> 
+    @defer (on hover; prefetch on idle) {
+        <app-heavy-loaders-fast cssClass="bg-yellow-500 h-20">
+            <span>On hover, idle</span>
+        </app-heavy-loaders-fast>
+    } @placeholder {
+        <div class="w-full h-20 bg-green-100">
+            <span>Place holder div!</span>
+        </div>
+    }
+</section>

@@ -1,0 +1,649 @@
+{
+    "data": [
+
+        {
+            "id": "b7700a0e37b846dfb69ab844e19dc121",
+            "pin": false,
+            "guid": "assets/images/product/photo/huevo.jpg",
+            "name": "Huevos",
+            "cost": 4.48,
+            "price": 8.20,
+            "quantity": 37,
+            "utility": 3.72,
+            "revenue": 137.64,
+            "due": false,
+            "removed": false,
+            "creationDate": "2024-03-29",
+            "dueDate": "2024-04-07"
+        },
+        
+    
+        {
+            "id": "712359add2344afb996439f744be5ca5",
+            "pin": false,
+            "guid": "assets/images/product/photo/huevo.jpg",
+            "name": "Huevos",
+            "cost": 4.48,
+            "price": 8.20,
+            "quantity": 41,
+            "utility": 3.72,
+            "revenue": 152.52,
+            "due": false,
+            "removed": false,
+            "creationDate": "2024-04-01",
+            "dueDate": "2024-04-08"
+        },
+        
+    
+        {
+            "id": "9232450069a0473ca164ce3cb89ae328",
+            "pin": false,
+            "guid": "assets/images/product/photo/huevo.jpg",
+            "name": "Huevos",
+            "cost": 4.48,
+            "price": 8.20,
+            "quantity": 38,
+            "utility": 3.72,
+            "revenue": 141.36,
+            "due": false,
+            "removed": false,
+            "creationDate": "2024-04-02",
+            "dueDate": "2024-04-09"
+        },
+        
+    
+        {
+            "id": "1cdd05a22cc9473cb6a58f1bf3d631af",
+            "pin": false,
+            "guid": "assets/images/product/photo/huevo.jpg",
+            "name": "Huevos",
+            "cost": 4.48,
+            "price": 8.20,
+            "quantity": 37,
+            "utility": 3.72,
+            "revenue": 137.64,
+            "due": false,
+            "removed": false,
+            "creationDate": "2024-04-03",
+            "dueDate": "2024-04-10"
+        },
+        
+    
+        {
+            "id": "b24d8d3a520b4d799fc8bc590ed3cb93",
+            "pin": false,
+            "guid": "assets/images/product/photo/huevo.jpg",
+            "name": "Huevos",
+            "cost": 4.48,
+            "price": 8.20,
+            "quantity": 39,
+            "utility": 3.72,
+            "revenue": 145.08,
+            "due": false,
+            "removed": false,
+            "creationDate": "2024-04-04",
+            "dueDate": "2024-04-11"
+        },
+        
+    
+        {
+            "id": "8cc67783a76d477ab1d02de1d47a6ad6",
+            "pin": false,
+            "guid": "assets/images/product/photo/huevo.jpg",
+            "name": "Huevos",
+            "cost": 4.48,
+            "price": 8.20,
+            "quantity": 38,
+            "utility": 3.72,
+            "revenue": 141.36,
+            "due": false,
+            "removed": false,
+            "creationDate": "2024-04-05",
+            "dueDate": "2024-04-12"
+        },
+        
+    
+        {
+            "id": "43fabe389ae44cd8bc6ed5c40ea707e6",
+            "pin": false,
+            "guid": "assets/images/product/photo/huevo.jpg",
+            "name": "Huevos",
+            "cost": 4.48,
+            "price": 8.20,
+            "quantity": 43,
+            "utility": 3.72,
+            "revenue": 159.96,
+            "due": false,
+            "removed": false,
+            "creationDate": "2024-04-06",
+            "dueDate": "2024-04-13"
+        },
+        
+    
+        {
+            "id": "a4f92908880b4729808915e35aec9851",
+            "pin": false,
+            "guid": "assets/images/product/photo/huevo.jpg",
+            "name": "Huevos",
+            "cost": 4.48,
+            "price": 8.20,
+            "quantity": 41,
+            "utility": 3.72,
+            "revenue": 152.52,
+            "due": false,
+            "removed": false,
+            "creationDate": "2024-04-07",
+            "dueDate": "2024-04-14"
+        },
+        
+    
+        {
+            "id": "ef2634b8ad6c4239af4067d9ff087125",
+            "pin": false,
+            "guid": "assets/images/product/photo/huevo.jpg",
+            "name": "Huevos",
+            "cost": 4.48,
+            "price": 8.20,
+            "quantity": 40,
+            "utility": 3.72,
+            "revenue": 148.8,
+            "due": false,
+            "removed": false,
+            "creationDate": "2024-04-08",
+            "dueDate": "2024-04-15"
+        },
+        
+    
+        {
+            "id": "b6da8f715d0a48d08a5570c68bb5f112",
+            "pin": false,
+            "guid": "assets/images/product/photo/huevo.jpg",
+            "name": "Huevos",
+            "cost": 4.48,
+            "price": 8.20,
+            "quantity": 37,
+            "utility": 3.72,
+            "revenue": 137.64,
+            "due": false,
+            "removed": false,
+            "creationDate": "2024-04-09",
+            "dueDate": "2024-04-16"
+        },
+        
+    
+        {
+            "id": "d1ef5fe33e4647e2b78c76179700fa05",
+            "pin": false,
+            "guid": "assets/images/product/photo/huevo.jpg",
+            "name": "Huevos",
+            "cost": 4.48,
+            "price": 8.20,
+            "quantity": 40,
+            "utility": 3.72,
+            "revenue": 148.8,
+            "due": false,
+            "removed": false,
+            "creationDate": "2024-04-10",
+            "dueDate": "2024-04-17"
+        },
+        
+    
+        {
+            "id": "4c35dc049f4a445ca1934525e078d85d",
+            "pin": false,
+            "guid": "assets/images/product/photo/huevo.jpg",
+            "name": "Huevos",
+            "cost": 4.48,
+            "price": 8.20,
+            "quantity": 37,
+            "utility": 3.72,
+            "revenue": 137.64,
+            "due": false,
+            "removed": false,
+            "creationDate": "2024-04-11",
+            "dueDate": "2024-04-18"
+        },
+        
+    
+        {
+            "id": "cc94ca2b75864316b08ad26a239c96a2",
+            "pin": false,
+            "guid": "assets/images/product/photo/huevo.jpg",
+            "name": "Huevos",
+            "cost": 4.48,
+            "price": 8.20,
+            "quantity": 39,
+            "utility": 3.72,
+            "revenue": 145.08,
+            "due": false,
+            "removed": false,
+            "creationDate": "2024-04-12",
+            "dueDate": "2024-04-19"
+        },
+        
+    
+        {
+            "id": "988341318f2b4f598b59df4e9a2404af",
+            "pin": false,
+            "guid": "assets/images/product/photo/huevo.jpg",
+            "name": "Huevos",
+            "cost": 4.48,
+            "price": 8.20,
+            "quantity": 38,
+            "utility": 3.72,
+            "revenue": 141.36,
+            "due": false,
+            "removed": false,
+            "creationDate": "2024-04-13",
+            "dueDate": "2024-04-20"
+        },
+        
+    
+        {
+            "id": "7723db171cee492284c79698de56df4e",
+            "pin": false,
+            "guid": "assets/images/product/photo/huevo.jpg",
+            "name": "Huevos",
+            "cost": 4.48,
+            "price": 8.20,
+            "quantity": 42,
+            "utility": 3.72,
+            "revenue": 156.24,
+            "due": false,
+            "removed": false,
+            "creationDate": "2024-04-14",
+            "dueDate": "2024-04-21"
+        },
+        
+    
+        {
+            "id": "927af949cd424bb795c2b6ab4768737e",
+            "pin": false,
+            "guid": "assets/images/product/photo/huevo.jpg",
+            "name": "Huevos",
+            "cost": 4.48,
+            "price": 8.20,
+            "quantity": 39,
+            "utility": 3.72,
+            "revenue": 145.08,
+            "due": false,
+            "removed": false,
+            "creationDate": "2024-04-15",
+            "dueDate": "2024-04-22"
+        },
+        
+    
+        {
+            "id": "14f1ba09bdc5446498c10e1d4559fe0e",
+            "pin": false,
+            "guid": "assets/images/product/photo/huevo.jpg",
+            "name": "Huevos",
+            "cost": 4.48,
+            "price": 8.20,
+            "quantity": 41,
+            "utility": 3.72,
+            "revenue": 152.52,
+            "due": false,
+            "removed": false,
+            "creationDate": "2024-04-16",
+            "dueDate": "2024-04-23"
+        },
+        
+    
+        {
+            "id": "ea2112b5005644df9d016d5214fc1f09",
+            "pin": false,
+            "guid": "assets/images/product/photo/huevo.jpg",
+            "name": "Huevos",
+            "cost": 4.48,
+            "price": 8.20,
+            "quantity": 41,
+            "utility": 3.72,
+            "revenue": 152.52,
+            "due": false,
+            "removed": false,
+            "creationDate": "2024-04-17",
+            "dueDate": "2024-04-24"
+        },
+        
+    
+        {
+            "id": "e3a74ca5b23f4ff5bab5c7f80a9ab83e",
+            "pin": false,
+            "guid": "assets/images/product/photo/huevo.jpg",
+            "name": "Huevos",
+            "cost": 4.48,
+            "price": 8.20,
+            "quantity": 39,
+            "utility": 3.72,
+            "revenue": 145.08,
+            "due": false,
+            "removed": false,
+            "creationDate": "2024-04-18",
+            "dueDate": "2024-04-25"
+        },
+            {
+            "id": "8cac168f399c4e1dbbc437769ccd0e45",
+            "pin": false,
+            "guid": "assets/images/product/photo/queque.jpg",
+            "name": "Queque Grande",
+            "cost": 9.25,
+            "price": 14,
+            "quantity": 32,
+            "utility": 4.75,
+            "revenue": 152.0,
+            "due": false,
+            "removed": false,
+            "creationDate": "2024-03-29",
+            "dueDate": "2024-04-07"
+        },
+        
+    
+        {
+            "id": "86d5fa90154c4562bad25ffdc3e4efd2",
+            "pin": false,
+            "guid": "assets/images/product/photo/queque.jpg",
+            "name": "Queque Grande",
+            "cost": 9.25,
+            "price": 14,
+            "quantity": 30,
+            "utility": 4.75,
+            "revenue": 142.5,
+            "due": false,
+            "removed": false,
+            "creationDate": "2024-04-01",
+            "dueDate": "2024-04-08"
+        },
+        
+    
+        {
+            "id": "133d68be3c4244d3a6817d83cec68e72",
+            "pin": false,
+            "guid": "assets/images/product/photo/queque.jpg",
+            "name": "Queque Grande",
+            "cost": 9.25,
+            "price": 14,
+            "quantity": 17,
+            "utility": 4.75,
+            "revenue": 80.75,
+            "due": false,
+            "removed": false,
+            "creationDate": "2024-04-02",
+            "dueDate": "2024-04-09"
+        },
+        
+    
+        {
+            "id": "efb766eabdae4a76841eb53803e940f0",
+            "pin": false,
+            "guid": "assets/images/product/photo/queque.jpg",
+            "name": "Queque Grande",
+            "cost": 9.25,
+            "price": 14,
+            "quantity": 25,
+            "utility": 4.75,
+            "revenue": 118.75,
+            "due": false,
+            "removed": false,
+            "creationDate": "2024-04-03",
+            "dueDate": "2024-04-10"
+        },
+        
+    
+        {
+            "id": "32cce9544d01488082793dea6aef80dc",
+            "pin": false,
+            "guid": "assets/images/product/photo/queque.jpg",
+            "name": "Queque Grande",
+            "cost": 9.25,
+            "price": 14,
+            "quantity": 12,
+            "utility": 4.75,
+            "revenue": 57.0,
+            "due": false,
+            "removed": false,
+            "creationDate": "2024-04-04",
+            "dueDate": "2024-04-11"
+        },
+        
+    
+        {
+            "id": "e1566f93e0954316bade0438a884e4e9",
+            "pin": false,
+            "guid": "assets/images/product/photo/queque.jpg",
+            "name": "Queque Grande",
+            "cost": 9.25,
+            "price": 14,
+            "quantity": 44,
+            "utility": 4.75,
+            "revenue": 209.0,
+            "due": false,
+            "removed": false,
+            "creationDate": "2024-04-05",
+            "dueDate": "2024-04-12"
+        },
+        
+    
+        {
+            "id": "9b28d955473e472997f3a30917f5849f",
+            "pin": false,
+            "guid": "assets/images/product/photo/queque.jpg",
+            "name": "Queque Grande",
+            "cost": 9.25,
+            "price": 14,
+            "quantity": 26,
+            "utility": 4.75,
+            "revenue": 123.5,
+            "due": false,
+            "removed": false,
+            "creationDate": "2024-04-06",
+            "dueDate": "2024-04-13"
+        },
+        
+    
+        {
+            "id": "5a8d48b4942844ba9bf6780b5a470040",
+            "pin": false,
+            "guid": "assets/images/product/photo/queque.jpg",
+            "name": "Queque Grande",
+            "cost": 9.25,
+            "price": 14,
+            "quantity": 25,
+            "utility": 4.75,
+            "revenue": 118.75,
+            "due": false,
+            "removed": false,
+            "creationDate": "2024-04-07",
+            "dueDate": "2024-04-14"
+        },
+        
+    
+        {
+            "id": "5a9068e0c633406fbf74f482dcfcf12e",
+            "pin": false,
+            "guid": "assets/images/product/photo/queque.jpg",
+            "name": "Queque Grande",
+            "cost": 9.25,
+            "price": 14,
+            "quantity": 39,
+            "utility": 4.75,
+            "revenue": 185.25,
+            "due": false,
+            "removed": false,
+            "creationDate": "2024-04-08",
+            "dueDate": "2024-04-15"
+        },
+        
+    
+        {
+            "id": "daaf0df3647047f1b432fa2847c794a2",
+            "pin": false,
+            "guid": "assets/images/product/photo/queque.jpg",
+            "name": "Queque Grande",
+            "cost": 9.25,
+            "price": 14,
+            "quantity": 49,
+            "utility": 4.75,
+            "revenue": 232.75,
+            "due": false,
+            "removed": false,
+            "creationDate": "2024-04-09",
+            "dueDate": "2024-04-16"
+        },
+        
+    
+        {
+            "id": "f522eb9bfc2e46ce89fce6fde6f56cce",
+            "pin": false,
+            "guid": "assets/images/product/photo/queque.jpg",
+            "name": "Queque Grande",
+            "cost": 9.25,
+            "price": 14,
+            "quantity": 16,
+            "utility": 4.75,
+            "revenue": 76.0,
+            "due": false,
+            "removed": false,
+            "creationDate": "2024-04-10",
+            "dueDate": "2024-04-17"
+        },
+        
+    
+        {
+            "id": "955682c215c8464b8791567bf298127a",
+            "pin": false,
+            "guid": "assets/images/product/photo/queque.jpg",
+            "name": "Queque Grande",
+            "cost": 9.25,
+            "price": 14,
+            "quantity": 33,
+            "utility": 4.75,
+            "revenue": 156.75,
+            "due": false,
+            "removed": false,
+            "creationDate": "2024-04-11",
+            "dueDate": "2024-04-18"
+        },
+        
+    
+        {
+            "id": "26856eb8c0704c709b63f8f328439187",
+            "pin": false,
+            "guid": "assets/images/product/photo/queque.jpg",
+            "name": "Queque Grande",
+            "cost": 9.25,
+            "price": 14,
+            "quantity": 24,
+            "utility": 4.75,
+            "revenue": 114.0,
+            "due": false,
+            "removed": false,
+            "creationDate": "2024-04-12",
+            "dueDate": "2024-04-19"
+        },
+        
+    
+        {
+            "id": "5bb56f43ec5b474a946c4f2344899ce3",
+            "pin": false,
+            "guid": "assets/images/product/photo/queque.jpg",
+            "name": "Queque Grande",
+            "cost": 9.25,
+            "price": 14,
+            "quantity": 25,
+            "utility": 4.75,
+            "revenue": 118.75,
+            "due": false,
+            "removed": false,
+            "creationDate": "2024-04-13",
+            "dueDate": "2024-04-20"
+        },
+        
+    
+        {
+            "id": "cfdd3e7d6da04aa1bb16e05e49b824f0",
+            "pin": false,
+            "guid": "assets/images/product/photo/queque.jpg",
+            "name": "Queque Grande",
+            "cost": 9.25,
+            "price": 14,
+            "quantity": 15,
+            "utility": 4.75,
+            "revenue": 71.25,
+            "due": false,
+            "removed": false,
+            "creationDate": "2024-04-14",
+            "dueDate": "2024-04-21"
+        },
+        
+    
+        {
+            "id": "2a59ba6f487b491d94f2094baf48146f",
+            "pin": false,
+            "guid": "assets/images/product/photo/queque.jpg",
+            "name": "Queque Grande",
+            "cost": 9.25,
+            "price": 14,
+            "quantity": 50,
+            "utility": 4.75,
+            "revenue": 237.5,
+            "due": false,
+            "removed": false,
+            "creationDate": "2024-04-15",
+            "dueDate": "2024-04-22"
+        },
+        
+    
+        {
+            "id": "e4ee93ce570c4b8fbded333a1ca4e14d",
+            "pin": false,
+            "guid": "assets/images/product/photo/queque.jpg",
+            "name": "Queque Grande",
+            "cost": 9.25,
+            "price": 14,
+            "quantity": 33,
+            "utility": 4.75,
+            "revenue": 156.75,
+            "due": false,
+            "removed": false,
+            "creationDate": "2024-04-16",
+            "dueDate": "2024-04-23"
+        },
+        
+    
+        {
+            "id": "3263054b8a2545f0b8c7ed394cbf989f",
+            "pin": false,
+            "guid": "assets/images/product/photo/queque.jpg",
+            "name": "Queque Grande",
+            "cost": 9.25,
+            "price": 14,
+            "quantity": 45,
+            "utility": 4.75,
+            "revenue": 213.75,
+            "due": false,
+            "removed": false,
+            "creationDate": "2024-04-17",
+            "dueDate": "2024-04-24"
+        },
+        
+    
+        {
+            "id": "c93c69562d504fe39033b2466ff1973c",
+            "pin": false,
+            "guid": "assets/images/product/photo/queque.jpg",
+            "name": "Queque Grande",
+            "cost": 9.25,
+            "price": 14,
+            "quantity": 37,
+            "utility": 4.75,
+            "revenue": 175.75,
+            "due": false,
+            "removed": false,
+            "creationDate": "2024-04-18",
+            "dueDate": "2024-04-25"
+        }
+    ]
+
+      
+}

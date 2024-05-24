@@ -1,0 +1,10 @@
+<div class="search-container">
+    <input
+        #txtQuery
+        type="text"
+        class="form-control p-2"
+        placeholder="Buscar lugar ..."
+        (keyup)="onQueryChanged(txtQuery.value)"
+    >
+    <app-search-results />
+</div>

@@ -1,0 +1,101 @@
+<div class="bg-white py-24 sm:py-32">
+    <div class="mx-auto max-w-7xl px-6 lg:px-8">
+
+      
+        <app-title title="Personal" subtitle="Esta es la lista de pacientes de hoy"/>
+
+        <div class="mx-auto mt-10  max-w-2xl  gap-x-8 gap-y-16 border-t border-gray-200 pt-10 sm:mt-16 sm:pt-16 lg:mx-0 lg:max-w-none lg:grid-cols-3">
+        
+            
+            <div class="flex flex-col justify-center m-1 gap-0.5">
+                <div>
+                    <label class="relative block">
+                        <span class="sr-only">Buscar</span>
+                        <div class="flex gap-1">
+                            <input class="placeholder:italic placeholder:text-slate-400 block bg-white w-full border border-l-0 border-slate-300 rounded-md py-2 pl-9 pr-10 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 sm:text-sm" placeholder="Buscar pacientes" type="text" name="search"/>
+                            <button class="flex items-center bg-white border border-l-0 border-slate-300 rounded-md py-2 pl-2 pr-3 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 sm:text-sm">
+                                <img [src]="searchIconUrl" width="17" height="17" >
+                            </button>
+                        </div>
+                    </label>
+                    
+                    
+                </div>
+
+                <div class="flex mb:justify-center justify-end">
+                    <button 
+                        class="flex flex-row justify-center  items-center min-w-5 text-white bg-rose-400 hover:bg-rose-400 active:bg-rose-500 focus:outline-none focus:ring focus:ring-rose-500 
+                                mt-1  px-3 py-3  border  rounded-md text-sm shadow-sm
+                        "
+                    >   
+                        <div class="flex items-center space-x-2 text-base">
+                            <img [src]="addIconUrl" width="15" height="15" > <span class="ml-2" >  Agregar </span>
+                        </div>
+                        
+                    </button>
+                </div>
+
+            </div>
+            
+    
+            @for(user of usersServices.users(); track user.id) {
+                <app-user-card 
+                id="{{user.id}}"
+                avatarUrl="{{user.avatar}}"
+                name="{{user.first_name}} {{user.last_name}}"
+                age="12"
+                skillPoints="45"
+                timeDate="Feb 01, 2024"
+                serviceTime="35"
+                email="{{user.email}}"
+                numberPhone="973697758"
+                > </app-user-card >
+            } @empty {
+                <h2> Cargando Data </h2>
+            }
+
+
+
+        </div>
+
+    </div>
+
+  </div>
+
+
+<!-----------------------------------------------
+
+<ul role="list" class="divide-y divide-gray-100">
+
+    @for(user of usersServices.users(); track user.id) {
+        <li class="flex justify-between gap-x-6 py-5">
+            <div class="flex min-w-0 gap-x-4">
+
+                <img class="h-12 w-12 flex-none rounded-full bg-gray-50" 
+                    [srcset]="user.avatar"
+                    [alt]="user.first_name"
+                />
+
+                <div class="min-w-0 flex-auto">
+                    <a
+                        [routerLink]="['/dashboard/user', user.id]"
+                        class="mx-5 hover:underline"
+                    >
+                        {{user.first_name}} {{user.last_name}}
+                    </a>
+                    <p class="mt-1 truncate text-xs leading-5 text-gray-500">{{user.email}}</p>
+                </div>
+
+            </div>
+            <div class="hidden shrink-0 sm:flex sm:flex-col sm:items-end">
+                <p class="text-sm leading-6 text-gray-900">Neurología</p>
+                <p class="mt-1 text-xs leading-5 text-gray-500">Last seen <time datetime="2023-01-23T13:23Z">3h ago</time></p>
+            </div>
+        </li>
+    } @empty {
+        <h2> Cargando Data </h2>
+    }
+
+</ul>
+
+-->

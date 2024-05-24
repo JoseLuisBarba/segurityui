@@ -1,0 +1,38 @@
+.doctor-container {
+  padding: 20px;
+}
+
+.title {
+  text-align: left; /* Cambiado de 'center' a 'left' */
+  margin-bottom: 30px; /* Agregado margen inferior para separar el título del siguiente elemento */
+}
+
+h1 {
+  font-weight: 800;
+  font-size: 24px;
+  letter-spacing: 2px;
+}
+
+.search {
+  display: flex;
+  margin-top: 10px;
+}
+
+input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px 0 0 5px;
+}
+
+.agregar-btn {
+  background-color: #63A1DB;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+  top: 20px;
+  right: 20px; /* Ajusta la distancia desde el borde derecho */
+}

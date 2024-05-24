@@ -1,0 +1,32 @@
+:host {
+  display: block;
+}
+
+
+.sidebar-desktop {
+  display: block;
+}
+
+.sidebar-mobile {
+  display: none;
+}
+
+/* Oculta la barra lateral en pantallas móviles (menos de 768px de ancho) */
+@media (max-width: 768px) {
+  .sidebar-desktop {
+    display: none; /* Oculta la barra lateral en dispositivos móviles */
+  }
+  .sidebar-mobile {
+    display: block;
+  }
+}
+
+/* Opcional: Mostrar la barra lateral nuevamente en pantallas más grandes */
+@media (min-width: 768px) {
+  .sidebar-desktop {
+    display: block; /* Muestra la barra lateral en pantallas más grandes (escritorio) */
+  }
+  .sidebar-mobile {
+    display: none;
+  }
+}
